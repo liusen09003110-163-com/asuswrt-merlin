@@ -47,7 +47,7 @@
 export SRCBASE := $(shell pwd)
 export SRCBASEDIR := $(shell pwd | sed 's/.*release\///g')
 RELEASEDIR := $(shell (cd $(SRCBASE)/.. && pwd -P))
-PATH := $(RELEASEDIR)/tools:$(SRCBASE)/ctools:$(PATH)
+PATH := $(RELEASEDIR)/tools:$(SRCBASE)/ctools:$(RELEASEDIR)/tools/brcm/hndtools-mipsel-linux/bin:$(RELEASEDIR)/tools/brcm/hndtools-mipsel-uclibc/bin:$(PATH)
 
 ifeq ($(ASUSWRTTARGETMAKDIR),)
 include ./target.mak
